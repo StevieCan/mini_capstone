@@ -26,7 +26,6 @@ class Api::ProductsController < ApplicationController
                           id: params[:id],
                           name: params[:name],
                           price: params[:price],
-                          image_url: params[:image_url],
                           description: params[:description],
                           supplier_id: params[:supplier_id]
       ) 
@@ -34,6 +33,7 @@ class Api::ProductsController < ApplicationController
     render 'show.json.jbuilder'
   end
   def show
+    puts "headers: #{request.headers["Authorization"]}"
     product_id = params[:id]
     @product = Product.find(product_id)
     render 'show.json.jbuilder'
@@ -45,7 +45,6 @@ class Api::ProductsController < ApplicationController
     @product.id = params[:id] || @product.id
     @product.name = params[:name] || @product.name
     @product.price = params[:price] || @product.price
-    @product.image_url = params[:image_url] || @product.image_url
     @product.description = params[:description] || @product.description
     @product.supplier_id = params[:supplier_id] || @product.supplier_id
 
