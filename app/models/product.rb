@@ -9,7 +9,9 @@ class Product < ApplicationRecord
   # def images
   #   Image.where(product_id: self.id) #Association method
   # end
-
+  has_many :orders
+  has_many :product_categories
+  
   def is_discounted?
     price < 10
   end
