@@ -5,10 +5,10 @@ json.user do
   json.email @order.user.email
 end
 
-json.product do
-  json.partial! @order.product, partial: 'api/products/product', as: :product
+json.carted_products do
+  json.partial! @order.carted_products, partial: 'api/carted_products/carted_product', as: :product
 end
-json.quantity @order.quantity
+
 json.subtotal @order.subtotal
 json.tax @order.tax
 json.total @order.total
@@ -19,5 +19,5 @@ json.formatted do
   json.total number_to_currency(@order.total)
 end
 
-json.purchased_on @order.created_at.strftime(%m/%d/%Y)
+json.purchased_on @order.purchased_on
 

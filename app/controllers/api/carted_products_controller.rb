@@ -1,11 +1,11 @@
-class Api::CartedProductsController < ApplicationController
-  
-  def index
-      @carted_product = CartedProduct.where(status: "carted")
-      render 'index.json.jbuilder'
-  end
 
-  def create
+class Api::CartedProductsController < ApplicationController
+    def index
+        @carted_products = current_user.current_cart
+        render 'index.json.jbuilder'
+    end
+
+    def create
     @carted_product = CartedProduct.new(
                                         user_id: current_user.id,
                                         product_id: params[:product_id],
@@ -14,6 +14,12 @@ class Api::CartedProductsController < ApplicationController
                                         )
     @carted_product.save
     render 'show.json.jbuilder'
-  end
-  
+    end
+
+    def destroy
+        carted_product_id = params[:id]
+        carted_product = CartedProduct.find(carted_product_id)
+        carted_product.update(status: "removed")
+        render json: {message: "Removed item from cart."}
+    end
 end
