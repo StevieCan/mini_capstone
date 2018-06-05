@@ -3,6 +3,12 @@ class User < ApplicationRecord
   has_many :carted_products
   has_many :orders
 
+  validates :email, presence: true
+  validates :email, uniqueness: true
+  validates :name, presence: true
+  validates :password, presence: true
+  validates :password, length: {in: 6..10}
+
   def current_cart
     carted_products.where(status: "carted")
   end
