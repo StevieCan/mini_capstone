@@ -1,4 +1,6 @@
-class Api::ProductsController < ApplicationController
+cclass Api::ProductsController < ApplicationController
+  before_action :authenticate_admin, only: [:create, :update, :destroy]
+
   def index
     @products = Product.all
 
@@ -60,7 +62,7 @@ class Api::ProductsController < ApplicationController
     if @product.save
       render 'show.json.jbuilder'
     else
-      render json: {errors: @product.errors.full_messages}, status: :unprocessable_entity
+      render json: {errors: @product.errors.full_messages }, status: :unprocessable_entity
     end
   end
 

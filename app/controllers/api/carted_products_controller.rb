@@ -1,5 +1,6 @@
 
 class Api::CartedProductsController < ApplicationController
+    
     def index
         @carted_products = current_user.current_cart
         render 'index.json.jbuilder'

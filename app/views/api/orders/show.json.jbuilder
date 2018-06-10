@@ -6,7 +6,7 @@ json.user do
 end
 
 json.carted_products do
-  json.partial! @order.carted_products, partial: 'api/carted_products/carted_product', as: :product
+  json.array! @order.carted_products, partial: 'api/carted_products/carted_product', as: :product
 end
 
 json.subtotal @order.subtotal
