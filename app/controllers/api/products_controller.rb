@@ -1,4 +1,4 @@
-cclass Api::ProductsController < ApplicationController
+class Api::ProductsController < ApplicationController
   before_action :authenticate_admin, only: [:create, :update, :destroy]
 
   def index
@@ -56,7 +56,7 @@ cclass Api::ProductsController < ApplicationController
 
     @product.name = params[:name] || @product.name
     @product.price = params[:price] || @product.price
-    @product.description = params[:description] || @product.description
+    @product.description = params[:drescription] || @product.description
     @product.supplier_id = params[:supplier_id] || @product.supplier_id
     
     if @product.save
