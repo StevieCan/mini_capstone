@@ -14,7 +14,7 @@ Product.create!([
   {name: "Crazy Explosives", price: "120.0", image_url: "https://images.footlocker.com/pi/BW0931/zoom/adidas-crazy-explosive-pk-mens", description: "These shoes are crazy comfortable and are a collab from Andrew Wiggins of the Timberwolves and Adidas", in_stock: true, supplier_id: 3},
   {name: "Kyrie 3", price: "200.0", image_url: "https://image.goat.com/crop/750/attachments/product_template_pictures/images/004/143/867/original/852395_103.png.png", description: "Kyrie 3 in white chrome released by Nike", in_stock: true, supplier_id: 2},
   {name: "Lebron Soldiers", price: "95.0", image_url: "https://images.footlocker.com/pi/97644401/zoom/nike-lebron-soldier-11-mens", description: "These are the 11th model made from Lebron James and Nike. ", in_stock: true, supplier_id: 1},
-  {name: "Yeezy", price: "500.0", image_url: nil, description: "This is so overpriced", in_stock: true, supplier_id: 2},
+  {name: "Yeezy Triple White", price: "500.0", image_url: "https://i.ytimg.com/vi/HZbeboj-OtI/maxresdefault.jpg", description: "This is so overpriced", in_stock: true, supplier_id: 2},
   {name: "Lebron XV", price: "200.0", image_url: "https://i2.wp.com/www.nicekicks.com/files/2018/03/nike-lebron-15-neon-1-1.jpg?fit=750%2C400&ssl=1", description: "The Lebron 15 is his most recent shoe released by Nike", in_stock: true, supplier_id: 1}
 ])
 
