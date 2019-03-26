@@ -6,6 +6,7 @@ Supplier.create!([
 
 Product.create!([
   {name: "Dame 4", price: "80.0", image_url: "https://s7d2.scene7.com/is/image/dkscdn/17ADIMLLLRD4WHTBLPRF_White_Black_is/", description: "white and black Dame 4s are released by Adidas", in_stock: true, supplier_id: 3},
+  {name: "Kobe AD NXT 360", price: "200.0", image_url: "https://images.solecollector.com/complex/images/c_fill,dpr_2.0,f_auto,fl_lossy,q_auto,w_680/hgmf8phos3weblimjnfu/nike-kobe-ad-nxt-360-white-multicolor-release-date-aq1087-102-pair", description: "Collab shoes from Nike with Kobe and Anthony Davis - have yet to try this but I am really excited if it is nearly as comfortable as the Kobe IX.", in_stock: true, supplier_id: 1},
   {name: "Kobe 9", price: "180.0", image_url: "https://cdn.thesolesupplier.co.uk/2017/09/Nike-Kobe-9-EM-Dusty-Cactus1.png", description: "In my opinion, the most comfortable basketball shoes from Kobe Bryant and Nike", in_stock: true, supplier_id: 3},
   {name: "PG2", price: "120.0", image_url: "https://cdn.shoepalace.com/product/images/960x/878627-417_01.jpg", description: "The Paul George 2 is a comfortable basketball shoe released by Nike", in_stock: true, supplier_id: 1},
   {name: "Kyrie 3", price: "150.0", image_url: "https://image.goat.com/crop/750/attachments/product_template_pictures/images/004/143/867/original/852395_103.png.png", description: "Kyrie 3 in white chrome released by Nike", in_stock: true, supplier_id: 3},
